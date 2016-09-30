@@ -1,0 +1,52 @@
+<!-- views/pages/contact.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+      <form class="form-horizontal">
+      <fieldset>
+        <legend>Envianos tus dudas</legend>
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputEmail" placeholder="Tu e-mail">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-lg-2 control-label">Tema</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputPassword" placeholder="Tema de la consulta">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="textArea" class="col-lg-2 control-label">Escribe aquí tus dudas</label>
+          <div class="col-lg-10">
+            <textarea class="form-control" rows="3" id="textArea"></textarea>
+            <span class="help-block">LIMITAR A 250 caracteres.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+<!--agregar ALERTAS!!!!!!!!!!!!!!!!!!!!-->
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>
