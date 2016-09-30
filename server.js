@@ -6,6 +6,9 @@ var app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+//declaracion directorio estatico para css
+//app.use(express.static(__dirname + '/pages'));
+
 // use res.render to load up an ejs view file
 
 // index page
