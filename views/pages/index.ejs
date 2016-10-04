@@ -4,14 +4,6 @@
 <html lang="es">
 <head>
     <% include ../partials/head %>
-    <script type="text/javascript">
-         <!--
-            function Warn() {
-               alert ("This is a warning message!");
-               document.write ("This is a warning message!");
-            }
-         //-->
-      </script>
 </head>
 <body class="container">
 
@@ -23,14 +15,31 @@
         <div class="jumbotron">
             <h1>This is great</h1>
             <p>Welcome to templating using EJS</p>
-            <p>Click the following button to see the result: </p>
+            <div class="container">
+              <h2 class="w3-center">Automatic Slideshow</h2>
+              <div class="w3-content w3-section" style="max-width:800px, max-height:800px">
+                <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png" style="width:100%">
+                <img class="mySlides" src="http://testmag.co.uk/wp-content/uploads/2011/06/TEST-PRESENTS.jpg" style="width:100%">
+                <img class="mySlides" src="images/img_3.jpg" style="width:100%">
+              </div>
 
-      <form>
-         <input type="button" value="Click Me" onclick="Warn();" />
-      </form>
+              <script>
+              var myIndex = 0;
+              carousel();
 
-            <!--aqui el slider-->
-
+              function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                     x[i].style.display = "none";
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}
+                  x[myIndex-1].style.display = "block";
+                  setTimeout(carousel, 2000); // Change image every 2 seconds
+              }
+              </script>
+            </div>
         </div>
     </main>
 
