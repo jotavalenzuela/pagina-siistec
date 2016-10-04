@@ -4,8 +4,14 @@
 <html lang="es">
 <head>
     <% include ../partials/head %>
-    <script type="text/javascript" src="scripts/slider.js"></script>
-
+    <script type="text/javascript">
+         <!--
+            function Warn() {
+               alert ("This is a warning message!");
+               document.write ("This is a warning message!");
+            }
+         //-->
+      </script>
 </head>
 <body class="container">
 
@@ -17,15 +23,14 @@
         <div class="jumbotron">
             <h1>This is great</h1>
             <p>Welcome to templating using EJS</p>
+            <p>Click the following button to see the result: </p>
+
+      <form>
+         <input type="button" value="Click Me" onclick="Warn();" />
+      </form>
+
             <!--aqui el slider-->
-            <div>
-              <figure id="slidy">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/eyes.jpg" class="img-responsive" alt="eyes" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lou.jpg" class="img-responsive" alt="lou" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lucie-2.jpg" class="img-responsive" alt="lucie-2" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lucie.jpg" class="img-responsive" alt="lucie" >
-              </figure>
-            </div>
+
         </div>
     </main>
 
