@@ -2,50 +2,54 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <% include ../partials/head %>
-</head>
-<body class="container">
+  <body class="container">
+    <div id="wrapper">
+      <div id="header">
+        <head>
+            <% include ../partials/head %>
+        </head>
+        <header>
+            <% include ../partials/header %>
+        </header>
+      </div>
+      <div id="content">
+        <main>
+          <div class="jumbotron">
+              <h1>Blablabla</h1>
+              <div class="container">
+                <h2 class="w3-center">Automatic Slideshow</h2>
+                <div class="w3-content w3-section">
+                  <img class="mySlides img-responsive" src="https://www.codejobs.biz/public/images/blog/original/321c90743897052.png" id="img-escal">
+                  <img class="mySlides img-responsive" src="https://www.codejobs.biz/public/images/blog/original/321c90743897052.png" id="img-escal">
+                  <img class="mySlides img-responsive" src="https://www.codejobs.biz/public/images/blog/original/321c90743897052.png" id="img-escal">
+                </div>
 
-    <header>
-        <% include ../partials/header %>
-    </header>
-
-    <main>
-        <div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
-            <div class="container">
-              <h2 class="w3-center">Automatic Slideshow</h2>
-              <div class="w3-content w3-section" style="max-width:800px, max-height:800px">
-                <img class="mySlides" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png" style="width:100%">
-                <img class="mySlides" src="http://testmag.co.uk/wp-content/uploads/2011/06/TEST-PRESENTS.jpg" style="width:100%">
-                <img class="mySlides" src="images/img_3.jpg" style="width:100%">
-              </div>
-
-              <script>
-              var myIndex = 0;
-              carousel();
-
-              function carousel() {
-                  var i;
-                  var x = document.getElementsByClassName("mySlides");
-                  for (i = 0; i < x.length; i++) {
-                     x[i].style.display = "none";
+                <script>
+                  var myIndex = 0;
+                  carousel();
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
                   }
-                  myIndex++;
-                  if (myIndex > x.length) {myIndex = 1}
-                  x[myIndex-1].style.display = "block";
-                  setTimeout(carousel, 2000); // Change image every 2 seconds
-              }
-              </script>
-            </div>
-        </div>
-    </main>
+                </script>
 
-    <footer>
-        <% include ../partials/footer %>
-    </footer>
-
-</body>
+                <p>blablabla2</p>
+              </div>
+          </div>
+        </main>
+      </div>
+      <div id="footer">
+        <footer class="modal-footser">
+            <% include ../partials/footer %>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
