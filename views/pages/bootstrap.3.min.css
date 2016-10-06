@@ -1377,7 +1377,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .modal-header .close{margin-top:-2px}
 .modal-title{margin:0;line-height:1.42857143}
 .modal-body{position:relative;padding:20px}
-.modal-footer{padding:20px;padding-top: 10px; padding-bottom: 0px;text-align:center;border-top:1px solid #2b3e50}
+.modal-footer{padding:20px;padding-top: 10px; padding-bottom: 0px;text-align:center;border-top:1px solid #4e5d6c}
 .modal-footer .btn+.btn{margin-left:5px;margin-bottom:0}
 .modal-footer .btn-group .btn+.btn{margin-left:-1px}
 .modal-footer .btn-block+.btn-block{margin-left:0}
@@ -1607,4 +1607,15 @@ a.list-group-item-danger.active:hover,a.list-group-item-danger.active:focus{back
 #img-escal {
   width: 850px;/*ancho*/
   height: 500px;/*alto*/
+}
+
+@media only screen and (min-width : 768px) {
+    .is-table-row {
+        display: table;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
 }
